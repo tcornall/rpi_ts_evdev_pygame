@@ -1,7 +1,7 @@
 # rpi_ts_evdev_pygame
 One way to get a touch LCD working on a raspberry pi using evdev for touchscreen and pygame for display.
 
-I bought a rpi 3B+ and an xc9022 2.8" resistive touch lcd from Jaycar, thinking that of course it would be easy to put the two together, after all,  the touchscreen was designed for that, wasn't it? It was certainly being advertised that way. This was my first foray into the world of rpi and I was expecting things to be as easy as 'pi'. Nope... Connectivity was no issue, but software was another story.
+I bought an rpi 3B+ and an xc9022 2.8" resistive touch lcd from Jaycar, thinking that of course it would be easy to put the two together, after all,  the touchscreen was designed for that, wasn't it? It was certainly being advertised that way. This was my first foray into the world of rpi and I was expecting things to be as easy as 'pi'. Nope... Connectivity was no issue, but software was another story.
 
 There's lots of great stuff out there, from Adafruit and various forums, discussing how to use the lcd and touchscreen. The lcd proved to be fairly straightforward and it wasn't long, after reading https://learn.adafruit.com/adafruit-pitft-28-inch-resistive-touchscreen-display-raspberry-pi/pitft-pygame-tips and running the https://github.com/adafruit/Raspberry-Pi-Installer-Scripts/blob/master/adafruit-pitft.sh script from Adafruit, before I had a tiny little desktop running on the lcd, rotated by 270 to give me the landscape orientation that I wanted. Too small to be useful, but so cute! Mouse worked, but touch didn't.
 
