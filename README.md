@@ -11,3 +11,5 @@ The solution:
 https://python-evdev.readthedocs.io/en/latest/tutorial.html showed some interesting application of python-evdev to read touchscreens and so I tried that and it gave much cleaner xy coords than the pygame touchscreen event handler. X and Y were still rotated and scale was badly wrong compared to display dimensions plus there was an offset in the reported coordinates, but as mentioned, I was happy to deal with all that as long as the reported coords were consistant with where I touched the screen, and they were!
 
 So, here is the python code that I wrote to investigate this. It displays a white screen and waits for touch input using evdev whereupon it draws red squares at the touch position using pygame.
+
+I have since tried this on an rpi that has HDMI monitor as well as the lcd attached and configured so that the lcd displays tty1 and the hdmi is associated with tty7. The pygame will display to an X window if you run the code whilst on tty7 but if you do a ctl-alt-f1 or sudo chvt1 before running it it will display on the lcd. Setting SDL_DEV does not appear to make any difference.
