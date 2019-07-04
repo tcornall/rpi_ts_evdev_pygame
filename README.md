@@ -12,4 +12,5 @@ https://python-evdev.readthedocs.io/en/latest/tutorial.html showed some interest
 
 So, here is the python code that I wrote to investigate this. It displays a white screen and waits for touch input using evdev whereupon it draws red squares at the touch position using pygame.
 
-I have since tried this on an rpi that has HDMI monitor as well as the lcd attached and configured so that the lcd displays tty1 and the hdmi is associated with tty7. The pygame will display to an X window if you run the code whilst on tty7 but if you do a ctl-alt-f1 or sudo chvt1 before running it it will display on the lcd. Setting SDL_DEV does not appear to make any difference.
+I have since tried this on an rpi that has HDMI monitor as well as the lcd attached and configured so that the lcd displays tty1 and the hdmi is associated with tty7. The pygame will display to an X window if you run the code whilst on tty7 but if you do a ctl-alt-f1 or sudo chvt1 before running it it will display on the lcd. 
+Setting SDL_FBDEV to /dev/fb1 or fb0 does not appear to make any difference to this behaviour when you have both lcd and hdmi and are running startx. It appears only the choice of tty1 or tty7 changes where the pygame display goes. Not sure if it makes a difference or not if you only have the lcd display and are in console mode.
